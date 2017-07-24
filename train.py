@@ -234,6 +234,7 @@ def run_united_training(meta_hypes, subhypes, submodules, subgraph, tv_sess,
             loss_values = {}
             eval_results = {}
             lrs = {}
+            select= step % num_models
             if select == 1:
                 logging.info("Detection Loss was used.")
             else:
